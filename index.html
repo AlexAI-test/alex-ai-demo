@@ -16,28 +16,27 @@
       color: #222;
       text-align: center;
     }
-    .comparison-container {
+    .comparison-container, .video-container {
       display: flex;
       flex-wrap: wrap;
       gap: 2rem;
       justify-content: center;
       margin-top: 2rem;
     }
-    .comparison-item {
+    .comparison-item, .video-item {
       flex: 1 1 400px;
       max-width: 500px;
       text-align: center;
-      background: rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.85);
       padding: 1rem;
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    .comparison-item img {
+    .comparison-item img, .video-item video {
       width: 100%;
       height: auto;
-      border: 1px solid #ccc;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       border-radius: 4px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
     .caption {
       font-size: 0.95rem;
@@ -72,6 +71,31 @@
       </p>
     </div>
   </div>
+
+  <h2 style="text-align:center; margin-top:4rem;">🤖 AI or Not? Video Challenge</h2>
+  <p style="text-align:center;">Watch the two videos below. One features Alex and his wife, the other shows a rainy fjord scene. Both were created using Google Flow AI. Can you guess which one is AI-generated?</p>
+
+  <div class="video-container">
+    <div class="video-item">
+      <h3>🎥 Video A</h3>
+      <video controls>
+        <source src="https://raw.githubusercontent.com/AlexAI-test/alex-ai-demo/main/sunset.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p class="caption">Hint: This one might be personal… or is it?</p>
+    </div>
+
+    <div class="video-item">
+      <h3>🌧️ Video B</h3>
+      <video controls>
+        <source src="https://raw.githubusercontent.com/AlexAI-test/alex-ai-demo/main/fjordRain.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p class="caption">Hint: Includes audio. But was it filmed or synthesized?</p>
+    </div>
+  </div>
+
+  <p style="text-align:center; margin-top:2rem;"><strong>Can you tell which one is AI-generated?</strong> Hover over the videos, listen closely, and take your best guess!</p>
 
 </body>
 </html>

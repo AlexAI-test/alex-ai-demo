@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Image Showcase</title>
+  <title>Demo of AI Power</title>
   <style>
     body {
       font-family: sans-serif;
-      background: #f9f9f9;
+      margin: 0;
       padding: 2rem;
+      background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
       line-height: 1.6;
     }
     h1, h2, h3 {
-      color: #333;
+      color: #222;
       text-align: center;
     }
     .comparison-container {
@@ -26,33 +27,38 @@
       flex: 1 1 400px;
       max-width: 500px;
       text-align: center;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
     .comparison-item img {
       width: 100%;
       height: auto;
       border: 1px solid #ccc;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 4px;
     }
     .caption {
       font-size: 0.95rem;
-      color: #555;
+      color: #444;
       margin-top: 0.5rem;
     }
   </style>
 </head>
 <body>
 
-  <h1>🖼️ AI Image Showcase</h1>
-  <p style="text-align:center;">This page compares images generated using different AI models based on the same prompt: <strong>"Romanian village under sunset"</strong>.</p>
+  <h1>⚡ Demo of AI Power</h1>
+  <p style="text-align:center;">Comparing two AI-generated images based on the same prompt: <strong>"Romanian village under sunset"</strong>.</p>
 
   <div class="comparison-container">
     <div class="comparison-item">
       <h3>🔧 Stable Diffusion (Custom AI)</h3>
       <img src="https://raw.githubusercontent.com/AlexAI-test/alex-ai-demo/refs/heads/main/image.webp" alt="Stable Diffusion output" />
       <p class="caption">
-        Model: Stable Diffusion<br>
-        Launch Date: August 22, 2022<br>
-        Platform: Hugging Face (custom deployment)
+        <strong>Model:</strong> Stable Diffusion<br>
+        <strong>Launch Date:</strong> August 22, 2022<br>
+        <strong>Platform:</strong> Hugging Face (custom deployment)
       </p>
     </div>
 

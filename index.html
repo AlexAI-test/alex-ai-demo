@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Demo of AI Power</title>
+  <script src="https://unpkg.com/wavesurfer.js"></script>
   <style>
     body {
       font-family: sans-serif;
@@ -16,23 +17,25 @@
       color: #222;
       text-align: center;
     }
-    .comparison-container, .video-container {
+    .section {
+      margin-top: 4rem;
+    }
+    .flex-container {
       display: flex;
       flex-wrap: wrap;
       gap: 2rem;
       justify-content: center;
-      margin-top: 2rem;
     }
-    .comparison-item, .video-item {
+    .card {
       flex: 1 1 400px;
       max-width: 500px;
-      text-align: center;
       background: rgba(255, 255, 255, 0.85);
       padding: 1rem;
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
     }
-    .comparison-item img, .video-item video {
+    .card img, .card video {
       width: 100%;
       height: auto;
       border-radius: 4px;
@@ -43,6 +46,40 @@
       color: #444;
       margin-top: 0.5rem;
     }
+    .audio-section {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 700px;
+      margin: 4rem auto;
+    }
+    #waveform {
+      margin: 1rem auto;
+      max-width: 600px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .audio-section button {
+      background: #ff4081;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+    .audio-section button:hover {
+      background: #e03570;
+    }
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: #333;
+    }
   </style>
 </head>
 <body>
@@ -50,8 +87,8 @@
   <h1>⚡ Demo of AI Power</h1>
   <p style="text-align:center;">Comparing two AI-generated images based on the same prompt: <strong>"Romanian village under sunset"</strong>.</p>
 
-  <div class="comparison-container">
-    <div class="comparison-item">
+  <div class="flex-container section">
+    <div class="card">
       <h3>🔧 Stable Diffusion (Custom AI)</h3>
       <img src="image.webp" alt="Stable Diffusion output" />
       <p class="caption">
@@ -61,7 +98,7 @@
       </p>
     </div>
 
-    <div class="comparison-item">
+    <div class="card">
       <h3>🎨 Lucid Origin (Leonardo.AI)</h3>
       <img src="image.png" alt="Lucid Origin output" />
       <p class="caption">
@@ -72,38 +109,20 @@
     </div>
   </div>
 
-  <h2 style="text-align:center; margin-top:4rem;">🤖 AI or Not? Video Challenge</h2>
-  <p style="text-align:center;">Watch the two videos below. One shows a personal sunset, the other a rainy fjord. Are they AI or not?</p>
+  <div class="section">
+    <h2>🤖 AI or Not? Video Challenge</h2>
+    <p style="text-align:center;">Watch the two videos below. One shows a personal sunset, the other a rainy fjord. Are they AI or not?</p>
 
-  <div class="video-container">
-    <div class="video-item">
-      <h3>🎥 Video A</h3>
-      <video controls>
-        <source src="sunset.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <p class="caption">Hint: This one might be personal… or is it?</p>
-    </div>
+    <div class="flex-container">
+      <div class="card">
+        <h3>🎥 Video A</h3>
+        <video controls>
+          <source src="sunset.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p class="caption">Hint: This one might be personal… or is it?</p>
+      </div>
 
-    <div class="video-item">
-      <h3>🌧️ Video B</h3>
-      <video controls>
-        <source src="fjordRain.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <p class="caption">Hint: Includes audio. But was it filmed or synthesized?</p>
-    </div>
-  </div>
-
-  <p style="text-align:center; margin-top:2rem; font-style:italic; color:#333;">
-    (Psst... both videos were created using Google Flow AI. Pretty impressive how versatile it is, right?)
-  </p>
-
-  <footer>
-    <p>Created by <strong>Alex</strong> — AI geek exploring the edge of creativity and engineering.</p>
-    <p>Built with help from <strong>Copilot</strong>, your friendly AI companion from Microsoft.</p>
-  </footer>
-
-  
-</body>
-</html>
+      <div class="card">
+        <h3>🌧️ Video B</h3>
+        <video controls>

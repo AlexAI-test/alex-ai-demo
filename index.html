@@ -126,3 +126,41 @@
       <div class="card">
         <h3>🌧️ Video B</h3>
         <video controls>
+          <source src="fjordRain.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p class="caption">Hint: Includes audio. But was it filmed or synthesized?</p>
+      </div>
+    </div>
+
+    <p style="text-align:center; margin-top:2rem; font-style:italic; color:#333;">
+      (Psst... both videos were created using Google Flow AI. Pretty impressive how versatile it is, right?)
+    </p>
+  </div>
+
+  <div class="audio-section">
+    <h2>🎶 AI Took My Toolbox</h2>
+    <p>A funky one-minute anthem about AI stealing tools and building disco bots.</p>
+    <div id="waveform"></div>
+    <button onclick="wavesurfer.playPause()">▶️ Play / Pause</button>
+  </div>
+
+  <footer>
+    <p>Created by <strong>Alex</strong> — AI geek exploring the edge of creativity and engineering.</p>
+    <p>Built with help from <strong>Copilot</strong>, your friendly AI companion from Microsoft.</p>
+  </footer>
+
+  <script>
+    const wavesurfer = WaveSurfer.create({
+      container: '#waveform',
+      waveColor: '#888',
+      progressColor: '#ff4081',
+      height: 100,
+      responsive: true
+    });
+
+    wavesurfer.load('assets/audio/ai-toolbox.mp3');
+  </script>
+
+</body>
+</html>
